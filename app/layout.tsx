@@ -1,5 +1,6 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
+// Conditional wrapper for cross-platform compatibility (Vercel/Cloudflare)
+import { Analytics } from '@/app/AnalyticsWrapper';
+import { SpeedInsights } from '@/app/AnalyticsWrapper';
 import { clsx } from 'clsx/lite';
 import {
   BASE_URL,

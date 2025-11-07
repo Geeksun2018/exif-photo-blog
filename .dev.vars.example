@@ -1,0 +1,25 @@
+# Cloudflare 本地开发环境变量示例
+# 复制此文件为 .dev.vars 并填入实际值
+
+# 数据库连接
+POSTGRES_URL=postgresql://exif_user:password@47.100.31.42:5432/exif_photo_blog?connect_timeout=10&statement_timeout=30000&idle_in_transaction_session_timeout=30000
+
+# Cloudflare R2 配置
+CLOUDFLARE_R2_ACCOUNT_ID=your_account_id
+CLOUDFLARE_R2_ACCESS_KEY_ID=your_access_key
+CLOUDFLARE_R2_SECRET_ACCESS_KEY=your_secret_key
+CLOUDFLARE_R2_BUCKET_NAME=exif-photos
+NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_DOMAIN=your-r2-domain.com
+
+# 存储偏好（使用 R2）
+NEXT_PUBLIC_STORAGE_PREFERENCE=cloudflare-r2
+
+# Next Auth
+AUTH_URL=http://localhost:8788
+AUTH_SECRET=your_secret_here
+
+# 其他配置保持与 Vercel 一致
+NEXT_PUBLIC_SITE_TITLE=EXIF Photo Blog
+NEXT_PUBLIC_SITE_DESCRIPTION=Film photography blog
+
+

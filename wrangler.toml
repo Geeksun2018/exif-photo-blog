@@ -1,0 +1,20 @@
+# Cloudflare Pages 配置
+name = "exif-photo-blog"
+compatibility_date = "2024-11-06"
+pages_build_output_dir = ".vercel/output/static"
+
+# Node.js 兼容性（保持与 Vercel 相同的运行时）
+compatibility_flags = ["nodejs_compat"]
+
+# 环境变量绑定（本地开发使用 .dev.vars）
+[vars]
+# 平台标识，用于条件导入
+PLATFORM = "cloudflare"
+
+# R2 存储绑定（生产环境）
+[[r2_buckets]]
+binding = "PHOTO_BUCKET"
+bucket_name = "exif-photos"
+preview_bucket_name = "exif-photos-preview"
+
+

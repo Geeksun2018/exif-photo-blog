@@ -36,3 +36,8 @@ next-env.d.ts
 
 # temp files
 temp.jpg
+
+# cloudflare
+.dev.vars
+.wrangler/
+wrangler.toml.local
