@@ -1,7 +1,7 @@
-# Cloudflare Pages 配置
+# Cloudflare Pages 配置 (OpenNext)
 name = "exif-photo-blog"
 compatibility_date = "2024-11-06"
-pages_build_output_dir = ".vercel/output/static"
+pages_build_output_dir = ".worker-next"
 
 # Node.js 兼容性（保持与 Vercel 相同的运行时）
 compatibility_flags = ["nodejs_compat"]

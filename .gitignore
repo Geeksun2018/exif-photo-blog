@@ -41,3 +41,5 @@ temp.jpg
 .dev.vars
 .wrangler/
 wrangler.toml.local
+.worker-next/
+.open-next/

@@ -7,9 +7,9 @@
     "lint": "eslint .",
     "test": "jest --watch --transformIgnorePatterns 'node_modules/(?!my-library-dir)/'",
     "analyze": "ANALYZE=true next build",
-    "pages:build": "@cloudflare/next-on-pages",
-    "pages:deploy": "pnpm pages:build && wrangler pages deploy .vercel/output/static",
-    "pages:dev": "wrangler pages dev .vercel/output/static --compatibility-date=2024-11-06 --compatibility-flag=nodejs_compat",
+    "pages:build": "opennextjs-cloudflare build",
+    "pages:deploy": "pnpm build && pnpm pages:build && wrangler pages deploy",
+    "pages:dev": "wrangler pages dev .worker-next --compatibility-date=2024-11-06 --compatibility-flag=nodejs_compat",
     "pages:preview": "pnpm build && pnpm pages:build && pnpm run pages:dev"
   },
   "packageManager": "pnpm@10.20.0",
@@ -61,10 +61,10 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.16",
     "@eslint/eslintrc": "^3.3.1",
     "@next/bundle-analyzer": "16.0.1",
     "@next/eslint-plugin-next": "16.0.1",
+    "@opennextjs/cloudflare": "^1.11.1",
     "@stylistic/eslint-plugin": "^5.5.0",
     "@tailwindcss/postcss": "^4.1.16",
     "@testing-library/dom": "^10.4.1",
